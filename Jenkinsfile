@@ -27,7 +27,7 @@ pipeline {
                 sh 'poetry run pytest'
             }
         }
-        state('Lint') {
+        stage('Lint') {
             steps {
                 sh 'poetry run black src'
             }
