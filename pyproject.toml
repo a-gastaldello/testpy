@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "testpy"
+version = "0.1.0"
+description = ""
+authors = ["Andrea Gastaldello <a.gastaldello@miriade.it>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+flake8 = "^7.0.0"
+black = "^24.4.0"
+tox = "^4.14.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = ["--import-mode=importlib"]
+
+[tool.black]
+line-length = 160
