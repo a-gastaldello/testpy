@@ -17,6 +17,7 @@ pipeline {
     stages {
         stage('Install Poetry') {
             steps {
+                sh 'apk add build-base'
                 sh 'pip install poetry'
                 sh ' poetry config virtualenvs.create false'
                 sh 'poetry install'
